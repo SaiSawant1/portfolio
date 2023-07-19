@@ -8,7 +8,7 @@ export const About = () => {
     id="about"
     initial={{opacity:0,y:100}} 
     animate={{opacity:1,y:0}} 
-    className="flex-col mb-28 max-w-[45rem] leading-8 justify-center items-center  text-center sm:mb-40">
+    className="flex-col mb-28 max-w-[45rem] leading-8 justify-center items-center  text-center sm:mb-40 scroll-mt-28">
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
         I am self taught full-stack web developer{" "}
