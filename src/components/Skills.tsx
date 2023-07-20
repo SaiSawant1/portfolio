@@ -29,7 +29,7 @@ export default function Skills() {
 
   React.useEffect(() => {
     if (inView) {
-      setActive("About");
+      setActive("Skills");
     }
   }, [inView]);
 

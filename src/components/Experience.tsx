@@ -1,10 +1,7 @@
 "use client";
 import React from "react";
 import SectionHeading from "./SectionHeading";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+import {VerticalTimeline,VerticalTimelineElement,} from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css";
 import { useTheme } from "@/context/ThemeContext";
 import { useInView } from "react-intersection-observer";
@@ -21,7 +18,7 @@ export default function Experience() {
   
     React.useEffect(() => {
       if (inView) {
-        setActive("About");
+        setActive("Experience");
       }
     }, [inView]);
   const { theme } = useTheme();
