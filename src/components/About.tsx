@@ -1,14 +1,30 @@
-'use client'
+"use client";
 import React from "react";
 import SectionHeading from "./SectionHeading";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 export const About = () => {
+  const { setActive } = useActiveSectionContext();
+
+  const { ref, inView } = useInView({
+    threshold: 0.75,
+  });
+
+  React.useEffect(() => {
+    if (inView) {
+      setActive("About");
+    }
+  },[inView]);
+
   return (
     <motion.section
-    id="about"
-    initial={{opacity:0,y:100}} 
-    animate={{opacity:1,y:0}} 
-    className="flex-col mb-28 max-w-[45rem] leading-8 justify-center items-center  text-center sm:mb-40 scroll-mt-28">
+      ref={ref}
+      id="about"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="flex-col mb-28 max-w-[45rem] leading-8 justify-center items-center  text-center sm:mb-40 scroll-mt-28"
+    >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
         I am self taught full-stack web developer{" "}

@@ -2,12 +2,30 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import { BsArrowRight, BsGithub } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 export default function Intro() {
+  
+  const {setActive}=useActiveSectionContext()
+
+  const { ref, inView } = useInView({
+    threshold: 0.75,
+  })
+
+ React.useEffect(()=>{
+  if(inView){
+    setActive("Home")
+  }
+  
+ },[inView])
+
+
   return (
     <section
+    ref={ref}
       id="home"
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
@@ -73,7 +91,7 @@ export default function Intro() {
         >
           Download CV <HiDownload className="group-hover:translate-y-2 transition" />
         </a>
-        <a href="https://github.com/SaiSawant1" className="border border-black/10 bg-white active:scale-105 hover:scale-[1.15] hover:text-gray-950 focus:scale-110 ease-in transition  outline-none text-gray-700 p-4  flex items-center justify-center rounded-full gap-2">
+        <a href="https://github.com/SaiSawant1" className="border border-black/10 bg-white active:scale-105 hover:scale-[1.15] hover:text-gray-950 focus:scale-110 ease-in transition  outline-none text-gray-700 p-4  flex items-center justify-center rounded-full gap-2 dark:bg-white/10">
           <BsGithub/>
         </a>
       </motion.div>
