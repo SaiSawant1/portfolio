@@ -46,11 +46,11 @@ export const About = () => {
         developer.
       </p>
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
+        <span className="italic">When I&apos;m not coding</span>, I enjoy playing
         video games, watching movies, and working out. I also enjoy{" "}
         <span className="font-medium">learning new things</span>. I am currently
         learning about{" "}
-        <span className="font-medium">AI and Machine Learning</span>. I'm also
+        <span className="font-medium">AI and Machine Learning</span>. I&apos;m also
         learning how to draw.
       </p>
     </motion.section>
