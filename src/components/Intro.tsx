@@ -32,12 +32,23 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
         className="mb-10 mt-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
       >
-        <span className="font-bold">Hello, I&apos;m Sai Sawant.</span> I&apos;m
-        a <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold"> 6 months </span>of experience. I love{" "}
-        <span className="italic"> building and deploying web </span>{" "}
+        <span className="font-bold">Hello, I&apos;m Sai Sawant.</span>{" "}
+        I&apos;m a <span className="font-bold">full-stack developer</span> with
+        {" "}
+        <span className="font-bold">Years of experience</span>{" "}
+        in web development. I love{" "}
+        <span className="italic">building and deploying web</span>{" "}
         applications. My primary focus is react{" "}
-        <span className="underline">(Next.js)</span>
+        <span className="underline">
+          (Next.js)
+        </span>{" "}
+        but I am well versed in backend technologies like NodeJs, express. With
+        a solid understanding of
+        <span className="underline">
+          {" "}Go Lang
+        </span>{"  "}
+        to create web servers. I am also a frequent contributer to open-source
+        projects like formbricks.
       </motion.h1>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
@@ -54,7 +65,7 @@ export default function Intro() {
         </Link>
         <a
           className="group border border-black/10 bg-white active:scale-105 focus:scale-110 ease-in transition hover:scale-110 hover:text-gray-950 outline-none text-gray-700 px-7 py-3 flex items-center justify-center rounded-full gap-2"
-          href="/CV.pdf"
+          href="/sai_Resume.pdf"
           download={true}
         >
           Download CV{" "}
